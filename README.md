@@ -1,4 +1,7 @@
-# cmu445_note.github.io
+# cmu445_note.github.io   
+
+cmu445 Project2.1  B+tree 内页  
+
 B+tree在Bustub里面的位置
 ![image](https://user-images.githubusercontent.com/60247486/223350172-adfc7d1a-5be6-41d4-bded-d208a944d994.png)
 
@@ -11,4 +14,7 @@ B+tree在Bustub里面的位置
   上面四行是经典操作   
 **函数MoveLastToFrontOf 参数(BPlusTreeInternalPage *recipient, const KeyType &middle_key,BufferPoolManager *buffer_pool_manager)
   ![image](https://user-images.githubusercontent.com/60247486/223351635-dc48fde9-23b0-4289-8874-f8570d92df52.png)
+   里面直接调用下面函数CopyFirstFrom 即可   
+**函数CopyFirstFrom  参数(const MappingType &pair, BufferPoolManager *buffer_pool_manager)
+   里面也主要是对于新赋值的子节点 修改它的parent_id
    
