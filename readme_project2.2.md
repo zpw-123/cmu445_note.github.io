@@ -15,5 +15,10 @@ Bustub里面所有的B+tree索引，全部都是非聚簇索引（也就是说va
 
 
 **函数MoveHalfTo 参数(BPlusTreeLeafPage *recipient)      
-由于b+ tree 有个最小size 所以当移动一半的时候 无法移动一半 需要找到GetMinSize() 就是MaxSize的一半
+由于b+ tree 有个最小size 所以当移动一半的时候 无法移动一半 需要找到GetMinSize() 就是MaxSize的一半   
+
+**函数MoveAllTo  参数(BPlusTreeLeafPage *recipient)  
+
+
+
 
