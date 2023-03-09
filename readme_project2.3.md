@@ -18,7 +18,11 @@ Task2 是单线程B+tree的重点
 
 ![image](https://user-images.githubusercontent.com/60247486/223692339-8ca2261b-6f9a-44cd-a282-bd724e73abe5.png)    
 ![image](https://user-images.githubusercontent.com/60247486/223694752-53cce27f-59e8-46ca-9b0e-445d9295cf20.png)     
-![image](https://user-images.githubusercontent.com/60247486/223695157-18368e63-9f18-43e3-bc9e-dce47251713c.png)
+![image](https://user-images.githubusercontent.com/60247486/223695157-18368e63-9f18-43e3-bc9e-dce47251713c.png)    
+########search或者insert都是在 /src/storage/index/b_plus_tree.cpp 里面  
+########函数 IsEmpty() 直接查询根节点是否存在就可以   
+########函数 GetValue(const KeyType &key, std::vector<ValueType> *result, Transaction *transaction) 首先先找到leaf_page 然后将在leaf_page里面进行二分搜索对应的key 然后注意当FetchPage的时候需要 在Fetch之后 要 使用bufferpoolmanager->UnpinPage   
+########函数 Insert(const KeyType &key, const ValueType &value, Transaction *transaction) 
 
 
 
