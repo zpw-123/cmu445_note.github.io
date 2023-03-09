@@ -22,7 +22,8 @@ Task2 是单线程B+tree的重点
 ########search或者insert都是在 /src/storage/index/b_plus_tree.cpp 里面  
 ########函数 IsEmpty() 直接查询根节点是否存在就可以   
 ########函数 GetValue(const KeyType &key, std::vector<ValueType> *result, Transaction *transaction) 首先先找到leaf_page 然后将在leaf_page里面进行二分搜索对应的key 然后注意当FetchPage的时候需要 在Fetch之后 要 使用bufferpoolmanager->UnpinPage   
-########函数 Insert(const KeyType &key, const ValueType &value, Transaction *transaction) 
+########函数 Insert(const KeyType &key, const ValueType &value, Transaction *transaction)      
+########函数 StartNewTree(const KeyType &key, const ValueType &value) 当插入(key,value)进入empty空的tree的时候 1.首先向缓冲池申请一个新的root page。2对于类中的变量 root_page_id进行赋值 并且更新UpdateRootPageId(1)
 
 
 
